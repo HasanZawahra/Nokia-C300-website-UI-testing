@@ -1,0 +1,13 @@
+class links:
+    phone_image_src = 'https://images.ctfassets.net/wcfotm6rrl7u/5v0xdBmbewv5KJQ4H29xda/026288b2c0aa9c833ab8d299e7f847a2/nokia_300-blue-back-us.png?h=76&q=80&fit=pad&w=76&fm=png&fl=png8'
+    unlocked_button_learn_more = 'https://www.hmd.com/en_us/unlocked-devices'
+    unlocked_button_buy_from_best_buy = 'https://www.bestbuy.com/site/nokia-c300-32gb-unlocked-blue/6540268.p?skuId=6540268'
+    unlocked_button_buy_from_target = 'https://www.target.com/p/nokia-c300-unlocked-32gb-smartphone-blue/-/A-88685124'
+    consumer_cellular_buy_from_walmart = 'https://www.walmart.com/ip/Consumer-Cellular-Nokia-C300-32GB-Blue-Smartphone/2524972645'
+    simple_mobile_buy_from_walmart = 'https://www.walmart.com/ip/Simple-Mobile-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Simple-Mobile/2084925544'
+    straight_talk_buy_from_walmart = 'https://www.walmart.com/ip/Straight-Talk-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk/1900999083'
+    buy_from_straight_talk = 'https://www.straighttalk.com/all-phones/nokia-c300'
+    total_by_verizon_buy_from_walmart = 'https://www.walmart.com/ip/Total-by-Verizon-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Total-by-Verizon/1244387577'
+    buy_from_total_by_verizon = 'https://totalwireless.com/smartphones/nokia-c300'
+    tracfone_buy_from_walmart = 'https://www.walmart.com/ip/Tracfone-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Tracfone/2415993695'
+    walmart_family_mobile_buy_from_walmart = 'https://www.walmart.com/ip/Walmart-Family-Mobile-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Walmart-Family-Mobile/2211713072'

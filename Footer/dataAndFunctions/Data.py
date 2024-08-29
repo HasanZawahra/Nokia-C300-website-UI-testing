@@ -1,0 +1,13 @@
+class Data:
+    SHOP_TEXTS = 'Shop\nSmartphones\nFeature phones\nTablets\nAccessories\nOffers\nFor business'
+    ABOUT_TEXTS = 'About\nOur story\nNewsroom\nBrand collaborations\nBlog\nEnterprise solutions'
+    THE_PLANET_AND_US_TEXTS = 'The planet and us\nSustainability\nSelf-repair\nDevice recycling'
+    SUPPORT_TEXTS = 'Support\nSupport center\nFAQ\nUser guides\nSoftware updates\nService and repairs\nShopping online\nTrack order'
+    VISA = '#payment-visa'
+    MASTERCARD = '#payment-mastercard'
+    DISCOVER = '#payment-discover'
+    AMERICAN_EXPRESS = '#payment-american-express'
+    KLARNA = '#payment-klarna-card'
+    PAYPAL = '#payment-paypal'
+    GOOGLE_PAY = '#payment-google-pay'
+    PARAGRAPH = 'TM and © 2024 HMD Global. All rights reserved. Bertel Jungin aukio 9, 02600 Espoo, Finland. Business ID 2724044-2. HMD Global Oy is a licensee of the Nokia brand for phones & tablets. Nokia is a registered trademark of Nokia Corporation.'
