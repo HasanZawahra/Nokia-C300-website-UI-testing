@@ -28,24 +28,6 @@ class lower_footer(Common):
         'HMD_LOGO': (By.CSS_SELECTOR, '#app > footer > a > svg > use')
     }
 
-    def click_facebook_logo(self):
-        self.find(self.lf_locators['FACEBOOK_LOGO']).click()
-
-    def click_instagram_logo(self):
-        self.find(self.lf_locators['INSTAGRAM_LOGO']).click()
-
-    def click_tiktok_logo(self):
-        self.find(self.lf_locators['TIKTOK_LOGO']).click()
-
-    def click_youtube_logo(self):
-        self.find(self.lf_locators['YOUTUBE_LOGO']).click()
-
-    def click_linked_in_logo(self):
-        self.find(self.lf_locators['LINKED_IN_LOGO']).click()
-
-    def click_discord_logo(self):
-        self.find(self.lf_locators['DISCORD_LOGO']).click()
-
     def check_new_tab(self, link):
         try:
             self.driver.switch_to.window(self.driver.window_handles[1])
@@ -57,94 +39,11 @@ class lower_footer(Common):
         except:
             return False
 
-    def check_visa(self, ref):
+    def check_payment(self,payment, ref):
         try:
-            href = self.find(self.lf_locators['visa']).get_attribute("href")
+            href = self.find(self.lf_locators[payment]).get_attribute("href")
             if href == ref:
                 return True
             return False
         except:
             return False
-
-    def check_mastercard(self, ref):
-        try:
-            href = self.find(self.lf_locators['mastercard']).get_attribute('href')
-            if href == ref:
-                return True
-            return False
-        except:
-            return False
-
-    def check_discover(self, ref):
-        try:
-            href = self.find(self.lf_locators['discover']).get_attribute("href")
-            if href == ref:
-                return True
-            return False
-        except:
-            return False
-
-    def check_american_express(self, ref):
-        try:
-            href = self.find(self.lf_locators['american_express']).get_attribute("href")
-            if href == ref:
-                return True
-            return False
-        except:
-            return False
-
-    def check_klarna(self, ref):
-        try:
-            href = self.find(self.lf_locators['klarna']).get_attribute("href")
-            if href == ref:
-                return True
-            return False
-        except:
-            return False
-
-    def check_paypal(self, ref):
-        try:
-            href = self.find(self.lf_locators['paypal']).get_attribute("href")
-            if href == ref:
-                return True
-            return False
-        except:
-            return False
-
-    def check_google_pay(self, ref):
-        try:
-            href = self.find(self.lf_locators['google-pay']).get_attribute("href")
-            if href == ref:
-                return True
-            return False
-        except:
-            return False
-
-    def click_united_states(self):
-        self.find(self.lf_locators['United_States']).click()
-
-    def click_Espanol(self):
-        self.find(self.lf_locators['Espanol']).click()
-
-    def get_paragraph(self):
-        return self.find(self.lf_locators['PARAGRAPH']).text
-
-    def click_terms(self):
-        self.find(self.lf_locators['Terms']).click()
-
-    def click_seller_terms(self):
-        self.find(self.lf_locators['Seller_terms']).click()
-
-    def click_privacy(self):
-        self.find(self.lf_locators['Privacy']).click()
-
-    def click_ethics(self):
-        self.find(self.lf_locators['Ethics']).click()
-
-    def click_speak_up_channel(self):
-        self.find(self.lf_locators['Speak_up_channel']).click()
-
-    def click_HMD_logo(self):
-        self.find(self.lf_locators['HMD_LOGO']).click()
-
-
