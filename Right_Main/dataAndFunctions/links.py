@@ -8,6 +8,6 @@ class links:
     straight_talk_buy_from_walmart = 'https://www.walmart.com/ip/Straight-Talk-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Straight-Talk/1900999083'
     buy_from_straight_talk = 'https://www.straighttalk.com/all-phones/nokia-c300'
     total_by_verizon_buy_from_walmart = 'https://www.walmart.com/ip/Total-by-Verizon-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Total-by-Verizon/1244387577'
-    buy_from_total_by_verizon = 'https://totalwireless.com/smartphones/nokia-c300'
+    buy_from_total_by_verizon = 'https://www.totalwireless.com/smartphones/nokia-c300'
     tracfone_buy_from_walmart = 'https://www.walmart.com/ip/Tracfone-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Tracfone/2415993695'
     walmart_family_mobile_buy_from_walmart = 'https://www.walmart.com/ip/Walmart-Family-Mobile-Nokia-C300-32GB-Blue-Prepaid-Smartphone-Locked-to-Walmart-Family-Mobile/2211713072'

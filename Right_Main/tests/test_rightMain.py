@@ -11,59 +11,59 @@ set = Setup(driver=Setup.driver)
 
 def test_check_phone_name_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_phone_name() == Data.PHONE_NAME
+    assert set.find(set.locators['PHONE_NAME']).text == Data.PHONE_NAME
 
 def test_check_sentence_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_sentence() == Data.SENTENCE
+    assert set.find(set.locators['SENTENCE']).text == Data.SENTENCE
 
 def test_check_feature_1_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_feature_1() == Data.FEATURE_1
+    assert set.find(set.locators['FEATURE_1']).text == Data.FEATURE_1
 
 def test_check_feature_2_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_feature_2() == Data.FEATURE_2
+    assert set.find(set.locators['FEATURE_2']).text == Data.FEATURE_2
 
 def test_check_feature_3_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_feature_3() == Data.FEATURE_3
+    assert set.find(set.locators['FEATURE_3']).text == Data.FEATURE_3
 
 def test_check_price_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_price() == Data.PRICE
+    assert set.find(set.locators['PRICE']).text == Data.PRICE
 
 def test_check_choose_color_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_choose_color_text() == Data.CHOOSE_COLOR
+    assert set.find(set.locators['CHOOSE_COLOR']).text == Data.CHOOSE_COLOR
 
 def test_check_blue_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_blue() == Data.BLUE
+    assert set.find(set.locators['BLUE']).text == Data.BLUE
 
 def test_check_choose_capacity_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_choose_capacity_text() == Data.CHOOSE_CAPACITY
+    assert set.find(set.locators['CHOOSE_CAPACITY']).text == Data.CHOOSE_CAPACITY
 
 def test_check_storage_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_storage() == Data.STORAGE
+    assert set.find(set.locators['STORAGE']).text == Data.STORAGE
 
 def test_check_choose_carrier_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_choose_carrier_text() == Data.CHOOSE_CARRIER
+    assert set.find(set.locators['CHOOSE_CARRIER']).text == Data.CHOOSE_CARRIER
 
 def test_check_available_at_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_available_at_text() == Data.AVAILABLE_AT
+    assert set.find(set.locators['AVAILABLE_AT']).text == Data.AVAILABLE_AT
 
 def test_check_bottom_text(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_bottom_text_1() == Data.BOTTOM_TEXT_1
+    assert set.find(set.locators['BOTTOM_TEXT_1']).text == Data.BOTTOM_TEXT_1
 
 def test_check_bottom_text_2(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.get_bottom_text_2() == Data.BOTTOM_TEXT_2
+    assert set.find(set.locators['BOTTOM_TEXT_2']).text == Data.BOTTOM_TEXT_2
 
 def test_check_signs(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
@@ -76,73 +76,73 @@ def test_check_image(set_ShopNow_page):
 
 def test_check_unlocked_button(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_unlocked_button() == True
+    assert set.check_button('Unlocked_button') == True
 
 def test_check_consumer_cellular(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_consumer_cellular() == True
+    assert set.check_button('Consumer_Cellular') == True
 
 def test_check_simple_mobile(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_simple_mobile() == True
+    assert set.check_button('Simple_Mobile') == True
 
 def test_check_straight_talk(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_straight_talk() == True
+    assert set.check_button('Straight_Talk') == True
 
 def test_check_total_by_verizon(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_total_by_verizon() == True
+    assert set.check_button('Total_by_verizon') == True
 
 def test_check_tracfone(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_tracfone() == True
+    assert set.check_button('Tracfone') == True
 
 def test_check_walmart_family_mobile(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_walmart_family_mobile() == True
+    assert set.check_button('Walmart_family_mobile') == True
 
 def test_click_unlocked_button(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
     assert set.check_clicked_Unlocked_button() == False
-    set.click_Unlocked_button()
+    set.find(set.locators['Unlocked_button']).click()
     assert set.check_clicked_Unlocked_button() == True
 
 def test_click_Consumer_Cellular(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_consumer_cellular() == False
-    set.click_consumer_cellular()
-    assert set.check_clicked_consumer_cellular() == True
+    assert set.check_clicked_seller('Consumer_Cellular_buy_from_Walmart') == False
+    set.find(set.locators['Consumer_Cellular']).click()
+    assert set.check_clicked_seller('Consumer_Cellular_buy_from_Walmart') == True
 
 def test_click_simple_mobile(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_simple_mobile() == False
-    set.click_simple_mobile()
-    assert set.check_clicked_simple_mobile() == True
+    assert set.check_clicked_seller('Simple_Mobile_buy_from_Walmart') == False
+    set.find(set.locators['Simple_Mobile']).click()
+    assert set.check_clicked_seller('Simple_Mobile_buy_from_Walmart') == True
 
 def test_click_straight_talk(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_straight_talk() == False
-    set.click_straight_talk()
-    assert set.check_clicked_straight_talk() == True
+    assert set.check_clicked_seller2('Straight_Talk_buy_from_Walmart', 'Buy_from_Straight_Talk') == False
+    set.find(set.locators['Straight_Talk']).click()
+    assert set.check_clicked_seller2('Straight_Talk_buy_from_Walmart', 'Buy_from_Straight_Talk') == True
 
 def test_click_total_by_verizon(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_total_by_verizon() == False
-    set.click_total_by_verizon()
-    assert set.check_clicked_total_by_verizon() == True
+    assert set.check_clicked_seller2('Total_by_verizon_buy_from_Walmart', 'buy_from_Total_by_verizon') == False
+    set.find(set.locators['Total_by_verizon']).click()
+    assert set.check_clicked_seller2('Total_by_verizon_buy_from_Walmart', 'buy_from_Total_by_verizon') == True
 
 def test_click_tracfone(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_tracfone() == False
-    set.click_tracfone()
-    assert set.check_clicked_tracfone() == True
+    assert set.check_clicked_seller('Tracfone_buy_from_Walmart') == False
+    set.find(set.locators['Tracfone']).click()
+    assert set.check_clicked_seller('Tracfone_buy_from_Walmart') == True
 
 def test_click_walmart_family_mobile(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_walmart_family_mobile() == False
-    set.click_walmart_family_mobile()
-    assert set.check_clicked_walmart_family_mobile() == True
+    assert set.check_clicked_seller('Walmart_family_mobile_buy_from_Walmart') == False
+    set.find(set.locators['Walmart_family_mobile']).click()
+    assert set.check_clicked_seller('Walmart_family_mobile_buy_from_Walmart') == True
 
 def test_close():
     set.driver.quit()

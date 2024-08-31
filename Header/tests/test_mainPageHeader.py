@@ -68,7 +68,7 @@ def test_click_menu_icon(set_ShopNow_page):
     curr_url = set.driver.current_url
     assert curr_url == global_links.buying_link
     assert set.check_menu_tab_cover() == False
-    set.click_menu_icon()
+    set.find(set.locators["MENU_ICON"]).click()
     curr_url = set.driver.current_url
     assert curr_url == global_links.buying_link
     assert set.check_menu_tab_cover() == True
@@ -76,7 +76,7 @@ def test_click_menu_icon(set_ShopNow_page):
 def test_click_cart_icon(set_ShopNow_page):
     curr_url = set.driver.current_url
     assert curr_url == global_links.buying_link
-    set.click_cart_icon()
+    set.find(set.locators["CART_ICON"]).click()
     curr_url = set.driver.current_url
     assert curr_url == links.cart_link
 
@@ -84,7 +84,7 @@ def test_click_account_icon(set_ShopNow_page):
     curr_url = set.driver.current_url
     assert curr_url == global_links.buying_link
     assert set.check_account_tab_cover() == False
-    set.click_account_icon()
+    set.find(set.locators["ACCOUNT_ICON"]).click()
     assert curr_url == global_links.buying_link
     assert set.check_account_tab_cover() == True
 

@@ -13,24 +13,6 @@ class home(Common):
         'NAV': (By.ID, "sticky-bar-header")
     }
 
-    def click_shop_now(self):
-        self.find(self.locators['SHOP_NOW_BUTTON']).click()
-
-    def get_phone_name(self):
-        return self.find(self.locators['PHONE_NAME']).text
-
-    def get_price(self):
-        return self.find(self.locators['PRICE']).text
-
-    def click_learn_more(self):
-        self.find(self.locators['Learn_more']).click()
-
-    def click_specs(self):
-        self.find(self.locators['Specs']).click()
-
-    def click_where_to_buy(self):
-        self.find(self.locators['Where_to_buy_button']).click()
-
     def check_clicked_where_to_buy(self):
         nav_element = self.find(self.locators['NAV'])
         classes = nav_element.get_attribute("class")

@@ -12,106 +12,107 @@ set = Setup(driver=Setup.driver)
 
 def test_click_facebook_logo(set_other_tab_opener):
     assert set.driver.current_url == global_links.buying_link
-    set.click_facebook_logo()
+    set.find(set.lf_locators['FACEBOOK_LOGO']).click()
     assert set.check_new_tab(links.FACEBOOK_link) == True
 
 def test_click_instagram_logo(set_other_tab_opener):
     assert set.driver.current_url == global_links.buying_link
-    set.click_instagram_logo()
+    set.find(set.lf_locators['INSTAGRAM_LOGO']).click()
     assert set.check_new_tab(links.INSTAGRAM_link) == True
 
 def test_click_tiktok_logo(set_other_tab_opener):
     assert set.driver.current_url == global_links.buying_link
-    set.click_tiktok_logo()
+    set.find(set.lf_locators['TIKTOK_LOGO']).click()
     assert set.check_new_tab(links.TIKTOK_link) == True
 
 def test_click_youtube_logo(set_other_tab_opener):
     assert set.driver.current_url == global_links.buying_link
-    set.click_youtube_logo()
+    set.find(set.lf_locators['YOUTUBE_LOGO']).click()
     time.sleep(5)
     assert set.check_new_tab(links.YOUTUBE_link) == True
 
 def test_click_linked_in_logo(set_other_tab_opener):
     assert set.driver.current_url == global_links.buying_link
-    set.click_linked_in_logo()
+    set.find(set.lf_locators['LINKED_IN_LOGO']).click()
     assert set.check_new_tab(links.LINKED_IN_link) == True
 
 def test_click_discord_logo(set_other_tab_opener):
     assert set.driver.current_url == global_links.buying_link
-    set.click_discord_logo()
+    set.find(set.lf_locators['DISCORD_LOGO']).click()
     assert set.check_new_tab(links.DISCORD_link) == True
 
 def test_check_visa(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_visa(Data.VISA) == True
+    time.sleep(1)
+    assert set.check_payment('visa',Data.VISA) == True
 
 def test_check_mastercard(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_mastercard(Data.MASTERCARD) == True
+    assert set.check_payment('mastercard', Data.MASTERCARD) == True
 
 def test_check_discover(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_discover(Data.DISCOVER) == True
+    assert set.check_payment('discover', Data.DISCOVER) == True
 
 def test_check_american_express(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_american_express(Data.AMERICAN_EXPRESS) == True
+    assert set.check_payment('american_express', Data.AMERICAN_EXPRESS) == True
 
 def test_check_klarna(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_klarna(Data.KLARNA) == True
+    assert set.check_payment('klarna', Data.KLARNA) == True
 
 def test_check_paypal(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_paypal(Data.PAYPAL) == True
+    assert set.check_payment('paypal', Data.PAYPAL) == True
 
 def test_check_google_pay(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_google_pay(Data.GOOGLE_PAY) == True
+    assert set.check_payment('google-pay', Data.GOOGLE_PAY) == True
 
 def test_click_united_states(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    set.click_united_states()
+    set.find(set.lf_locators['United_States']).click()
     assert set.driver.current_url == links.UNITED_STATES_link
 
 def test_click_Espanol(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    set.click_Espanol()
+    set.find(set.lf_locators['Espanol']).click()
     assert set.driver.current_url == links.Espanol_link
 
 def test_check_paragraph(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    par = set.get_paragraph()
+    par = set.find(set.lf_locators['PARAGRAPH']).text
     assert par == Data.PARAGRAPH
 
 def test_click_Terms(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    set.click_terms()
+    set.find(set.lf_locators['Terms']).click()
     assert set.driver.current_url == links.Terms_link
 
 def test_click_Seller_terms(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    set.click_seller_terms()
+    set.find(set.lf_locators['Seller_terms']).click()
     assert set.driver.current_url == links.Seller_terms_link
 
 def test_click_Privacy(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    set.click_privacy()
+    set.find(set.lf_locators['Privacy']).click()
     assert set.driver.current_url == links.Privacy_link
 
 def test_click_Ethics(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    set.click_ethics()
+    set.find(set.lf_locators['Ethics']).click()
     assert set.driver.current_url == links.Ethics_link
 
 def test_click_speak_up_channel(set_other_tab_opener):
     assert set.driver.current_url == global_links.buying_link
-    set.click_speak_up_channel()
+    set.find(set.lf_locators['Speak_up_channel']).click()
     assert set.check_new_tab(links.Speak_up_channel_link) == True
 
 def test_click_HMD_LOGO(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    set.click_HMD_logo()
+    set.find(set.lf_locators['HMD_LOGO']).click()
     assert set.driver.current_url == global_links.HMD_logo_link
 
 # def test_close():

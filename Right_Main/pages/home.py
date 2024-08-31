@@ -44,51 +44,6 @@ class home(Common):
         'Walmart_family_mobile_buy_from_Walmart' : (By.CSS_SELECTOR, '#app > main > div > div.col.css-hbdthm.e1j3itnl1.col-md-6.col-xxs-12 > a > span'),
     }
 
-    def click_shop_now(self):
-        self.find(self.locators['SHOP_NOW_BUTTON']).click()
-
-    def get_phone_name(self):
-        return self.find(self.locators['PHONE_NAME']).text
-
-    def get_sentence(self):
-        return self.find(self.locators['SENTENCE']).text
-
-    def get_feature_1(self):
-        return self.find(self.locators['FEATURE_1']).text
-
-    def get_feature_2(self):
-        return self.find(self.locators['FEATURE_2']).text
-
-    def get_feature_3(self):
-        return self.find(self.locators['FEATURE_3']).text
-
-    def get_price(self):
-        return self.find(self.locators['PRICE']).text
-
-    def get_choose_color_text(self):
-        return self.find(self.locators['CHOOSE_COLOR']).text
-
-    def get_blue(self):
-        return self.find(self.locators['BLUE']).text
-
-    def get_storage(self):
-        return self.find(self.locators['STORAGE']).text
-
-    def get_choose_capacity_text(self):
-        return self.find(self.locators['CHOOSE_CAPACITY']).text
-
-    def get_choose_carrier_text(self):
-        return self.find(self.locators['CHOOSE_CARRIER']).text
-
-    def get_available_at_text(self):
-        return self.find(self.locators['AVAILABLE_AT']).text
-
-    def get_bottom_text_1(self):
-        return self.find(self.locators['BOTTOM_TEXT_1']).text
-
-    def get_bottom_text_2(self):
-        return self.find(self.locators['BOTTOM_TEXT_2']).text
-
     def get_phone_image(self):
         return self.find(self.locators['PHONE_IMAGE']).get_attribute('src')
 
@@ -103,58 +58,12 @@ class home(Common):
         except:
             return False
 
-    def check_unlocked_button(self):
+    def check_button(self, button):
         try:
-            self.find(self.locators['Unlocked_button'])
+            self.find(self.locators[button])
             return True
         except:
             return False
-
-    def check_consumer_cellular(self):
-        try:
-            self.find(self.locators['Consumer_Cellular'])
-            return True
-        except:
-            return False
-
-    def check_simple_mobile(self):
-        try:
-            self.find(self.locators['Simple_Mobile'])
-            return True
-        except:
-            return False
-
-    def check_straight_talk(self):
-        try:
-            self.find(self.locators['Straight_Talk'])
-            return True
-        except:
-            return False
-
-    def check_total_by_verizon(self):
-        try:
-            self.find(self.locators['Total_by_verizon'])
-            return True
-        except:
-            return False
-
-    def check_tracfone(self):
-        try:
-            self.find(self.locators['Tracfone'])
-            return True
-        except:
-            return False
-
-    def check_walmart_family_mobile(self):
-        try:
-            self.find(self.locators['Walmart_family_mobile'])
-            return True
-        except:
-            return False
-
-
-    def click_Unlocked_button(self):
-        self.find(self.locators['Unlocked_button']).click()
 
     def check_clicked_Unlocked_button(self):
         try:
@@ -169,86 +78,23 @@ class home(Common):
         except:
             return False
 
-    def click_consumer_cellular(self):
-        self.find(self.locators['Consumer_Cellular']).click()
-
-    def check_clicked_consumer_cellular(self):
+    def check_clicked_seller(self, locator):
         try:
             available = self.find(self.locators['Available_at_text_dev'])
             pricing = self.find(self.locators['PRICING_NOTE_TEXT'])
-            self.find(self.locators['Consumer_Cellular_buy_from_Walmart'])
+            self.find(self.locators[locator])
             if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
                 return True
             return False
         except:
             return False
 
-    def click_simple_mobile(self):
-        self.find(self.locators['Simple_Mobile']).click()
-
-    def check_clicked_simple_mobile(self):
+    def check_clicked_seller2(self, loc1, loc2):
         try:
             available = self.find(self.locators['Available_at_text_dev'])
             pricing = self.find(self.locators['PRICING_NOTE_TEXT'])
-            self.find(self.locators['Simple_Mobile_buy_from_Walmart'])
-            if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
-                return True
-            return False
-        except:
-            return False
-
-    def click_straight_talk(self):
-        self.find(self.locators['Straight_Talk']).click()
-
-    def check_clicked_straight_talk(self):
-        try:
-            available = self.find(self.locators['Available_at_text_dev'])
-            pricing = self.find(self.locators['PRICING_NOTE_TEXT'])
-            self.find(self.locators['Straight_Talk_buy_from_Walmart'])
-            self.find(self.locators['Buy_from_Straight_Talk'])
-            if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
-                return True
-            return False
-        except:
-            return False
-
-    def click_total_by_verizon(self):
-        self.find(self.locators['Total_by_verizon']).click()
-
-    def check_clicked_total_by_verizon(self):
-        try:
-            available = self.find(self.locators['Available_at_text_dev'])
-            pricing = self.find(self.locators['PRICING_NOTE_TEXT'])
-            self.find(self.locators['Total_by_verizon_buy_from_Walmart'])
-            self.find(self.locators['buy_from_Total_by_verizon'])
-            if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
-                return True
-            return False
-        except:
-            return False
-
-    def click_tracfone(self):
-        self.find(self.locators['Tracfone']).click()
-
-    def check_clicked_tracfone(self):
-        try:
-            available = self.find(self.locators['Available_at_text_dev'])
-            pricing = self.find(self.locators['PRICING_NOTE_TEXT'])
-            self.find(self.locators['Tracfone_buy_from_Walmart'])
-            if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
-                return True
-            return False
-        except:
-            return False
-
-    def click_walmart_family_mobile(self):
-        self.find(self.locators['Walmart_family_mobile']).click()
-
-    def check_clicked_walmart_family_mobile(self):
-        try:
-            available = self.find(self.locators['Available_at_text_dev'])
-            pricing = self.find(self.locators['PRICING_NOTE_TEXT'])
-            self.find(self.locators['Walmart_family_mobile_buy_from_Walmart'])
+            self.find(self.locators[loc1])
+            self.find(self.locators[loc2])
             if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
                 return True
             return False

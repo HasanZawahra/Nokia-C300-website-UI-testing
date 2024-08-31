@@ -33,80 +33,55 @@ class home(Common):
         'HMD_logo': (By.CSS_SELECTOR, '#header > dialog > div > div > div.col.css-h7n3fv.eo76sqx2.col-xxs-12.col-lg-7 > a > svg > use'),
     }
 
-
-    def click_shop_now(self):
-        self.find(self.locators["SHOP_NOW_BUTTON"]).click()
-
-    def click_smartphones(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["Smartphones"]).click()
-        except:
-            self.find(self.locators["Smartphones"]).click()
-
-    def click_feature_phones(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["Feature_phones"]).click()
-        except:
-            self.find(self.locators["Feature_phones"]).click()
-
-    def click_tablets(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["Tablets"]).click()
-        except:
-            self.find(self.locators["Tablets"]).click()
-
-    def click_accessories(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["Accessories"]).click()
-        except:
-            self.find(self.locators["Accessories"]).click()
-
-    def click_HMD_Skyline(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["HMD_Skyline"]).click()
-        except:
-            self.find(self.locators["HMD_Skyline"]).click()
-
-    def click_Offers(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["Offers"]).click()
-        except:
-            self.find(self.locators["Offers"]).click()
-
-    def click_For_business(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["For_business"]).click()
-        except:
-            self.find(self.locators["For_business"]).click()
-
-    def click_HMD_logo(self):
-        try:
-            self.find(self.locators["COVERED_BODY"])
-            self.find(self.menu_locators["HMD_logo"]).click()
-        except:
-            try:
-                self.find(self.locators["COVERED_BODY"])
-                self.find(self.locators["Account_tab_HMD_LOGO"]).click()
-            except:
-                self.find(self.locators["HMD_logo"]).click()
-
-    def click_menu_icon(self):
-        self.find(self.locators["MENU_ICON"]).click()
-
-    def click_cart_icon(self):
-        self.find(self.locators["CART_ICON"]).click()
-
-    def click_account_icon(self):
-        self.find(self.locators["ACCOUNT_ICON"]).click()
-
     def check_menu_tab_cover(self):
         dialog_element = self.find(self.locators["COVERED_BODY"])
         is_open = dialog_element.get_attribute("open") is not None
         return is_open
+
+    def click_smartphones(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["Smartphones"]).click()
+        else:
+            self.find(self.locators["Smartphones"]).click()
+
+    def click_feature_phones(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["Feature_phones"]).click()
+        else:
+            self.find(self.locators["Feature_phones"]).click()
+
+    def click_tablets(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["Tablets"]).click()
+        else:
+            self.find(self.locators["Tablets"]).click()
+
+    def click_accessories(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["Accessories"]).click()
+        else:
+            self.find(self.locators["Accessories"]).click()
+
+    def click_HMD_Skyline(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["HMD_Skyline"]).click()
+        else:
+            self.find(self.locators["HMD_Skyline"]).click()
+
+    def click_Offers(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["Offers"]).click()
+        else:
+            self.find(self.locators["Offers"]).click()
+
+    def click_For_business(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["For_business"]).click()
+        else:
+            self.find(self.locators["For_business"]).click()
+
+    def click_HMD_logo(self):
+        if self.check_menu_tab_cover():
+            self.find(self.menu_locators["HMD_logo"]).click()
+        else:
+            self.find(self.locators["HMD_logo"]).click()
