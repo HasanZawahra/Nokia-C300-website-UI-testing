@@ -65,22 +65,22 @@ def test_click_My_account_button(set_menu_tab):
 
 def test_click_About(set_menu_tab):
     assert set.check_menu_tab_cover() == True
-    assert set.check_about_clicked() == False
+    assert set.check_dropdwon_list("About_details") == False
     set.find(set.menuLocators["About"]).click()
-    assert set.check_about_clicked() == True
+    assert set.check_dropdwon_list("About_details") == True
     set.find(set.menuLocators["About"]).click()
-    assert set.check_about_clicked() == False
+    assert set.check_dropdwon_list("About_details") == False
 
 def test_click_who_we_are(set_About_links):
     assert set.check_menu_tab_cover() == True
-    assert set.check_about_clicked() == True
+    assert set.check_dropdwon_list("About_details") == True
     set.find(set.menuLocators["who_we_are"]).click()
     curr_url = set.driver.current_url
     assert curr_url == links.who_we_are_link
 
 def test_click_Newsroom(set_About_links):
     assert set.check_menu_tab_cover() == True
-    assert set.check_about_clicked() == True
+    assert set.check_dropdwon_list("About_details") == True
     set.find(set.menuLocators["Newsroom"]).click()
     curr_url = set.driver.current_url
     assert curr_url == links.Newsroom_link
@@ -99,22 +99,22 @@ def test_click_Self_repair(set_menu_tab):
 
 def test_click_Repair_reuse_recycle(set_menu_tab):
     assert set.check_menu_tab_cover() == True
-    assert set.check_repair_reuse_recycle_clicked() == False
+    assert set.check_dropdwon_list("RRR_details") == False
     set.find(set.menuLocators["Repair, reuse, recycle"]).click()
-    assert set.check_repair_reuse_recycle_clicked() == True
+    assert set.check_dropdwon_list("RRR_details") == True
     set.find(set.menuLocators["Repair, reuse, recycle"]).click()
-    assert set.check_repair_reuse_recycle_clicked() == False
+    assert set.check_dropdwon_list("RRR_details") == False
 
 def test_click_repair_reuse_recycle_self_repair(set_repair_reuse_recycle_links):
     assert set.check_menu_tab_cover() == True
-    assert set.check_repair_reuse_recycle_clicked() == True
+    assert set.check_dropdwon_list("RRR_details") == True
     set.find(set.menuLocators["RRR_self_repair"]).click()
     curr_url = set.driver.current_url
     assert curr_url == links.RRR_self_self_repair_link
 
 def test_click_Device_recycling(set_repair_reuse_recycle_links):
     assert set.check_menu_tab_cover() == True
-    assert set.check_repair_reuse_recycle_clicked() == True
+    assert set.check_dropdwon_list("RRR_details") == True
     set.find(set.menuLocators["Device_recycling"]).click()
     curr_url = set.driver.current_url
     assert curr_url == links.Device_recycling_link

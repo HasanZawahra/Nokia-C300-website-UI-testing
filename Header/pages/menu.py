@@ -32,12 +32,7 @@ class menu(Common):
             return False
 
 
-    def check_about_clicked(self):
-        details_element = self.find(self.menuLocators["About_details"])
-        is_open = details_element.get_attribute("open") is not None
-        return is_open
-
-    def check_repair_reuse_recycle_clicked(self):
-        details_element = self.find(self.menuLocators["RRR_details"])
+    def check_dropdwon_list(self, locator):
+        details_element = self.find(self.menuLocators[locator])
         is_open = details_element.get_attribute("open") is not None
         return is_open

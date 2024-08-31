@@ -37,6 +37,3 @@ class buttons(Common):
                 return False
         except:
             return False
-
-
-
