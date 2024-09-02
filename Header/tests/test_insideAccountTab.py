@@ -40,7 +40,7 @@ def test_click_continue_with_google(set_account_tab):
 def test_click_my_account_x(set_account_tab):
     assert set.check_account_tab_cover() == True
     set.find(set.account_locators['MY_ACCOUNT_X']).click()
-    assert set.check_account_tab_cover() == False
+    assert set.check_account_tab_cover() != True
 
 # def test_close():
 #     set.driver.quit()

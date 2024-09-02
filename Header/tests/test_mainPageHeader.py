@@ -83,7 +83,7 @@ def test_click_cart_icon(set_ShopNow_page):
 def test_click_account_icon(set_ShopNow_page):
     curr_url = set.driver.current_url
     assert curr_url == global_links.buying_link
-    assert set.check_account_tab_cover() == False
+    assert set.check_account_tab_cover() != True
     set.find(set.locators["ACCOUNT_ICON"]).click()
     assert curr_url == global_links.buying_link
     assert set.check_account_tab_cover() == True

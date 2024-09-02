@@ -28,8 +28,8 @@ class menu(Common):
         try:
             self.find(self.menuLocators["ACCOUNT_TAB_COVER"])
             return True
-        except:
-            return False
+        except Exception as e:
+            return e
 
 
     def check_dropdwon_list(self, locator):

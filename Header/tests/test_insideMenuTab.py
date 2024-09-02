@@ -58,7 +58,7 @@ def test_click_HMD_logo(set_menu_tab):
 
 def test_click_My_account_button(set_menu_tab):
     assert set.check_menu_tab_cover() == True
-    assert set.check_account_tab_cover() == False
+    assert set.check_account_tab_cover() != True
     set.find(set.menuLocators["My_account_button"]).click()
     assert set.driver.current_url == global_links.buying_link
     assert set.check_account_tab_cover() == True
