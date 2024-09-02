@@ -34,16 +34,14 @@ class lower_footer(Common):
             curr_link = self.driver.current_url
             if curr_link == link:
                 return True
-            else:
-                return False
-        except:
-            return False
+        except Exception as e:
+            return e
 
     def check_payment(self,payment, ref):
         try:
             href = self.find(self.lf_locators[payment]).get_attribute("href")
             if href == ref:
                 return True
-            return False
-        except:
-            return False
+
+        except Exception as e:
+            return e
