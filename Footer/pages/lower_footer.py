@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from .common import Common
 
+
 class lower_footer(Common):
 
     lf_locators = {
@@ -42,6 +43,6 @@ class lower_footer(Common):
             href = self.find(self.lf_locators[payment]).get_attribute("href")
             if href == ref:
                 return True
-
+            return False
         except Exception as e:
             return e

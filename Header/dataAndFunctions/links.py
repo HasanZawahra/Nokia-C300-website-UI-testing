@@ -10,7 +10,7 @@ class links:
     Support_link = 'https://www.hmd.com/en_us/support'
     United_States_link = 'https://www.hmd.com/en_us/choose-your-language'
     Español_link = 'https://www.hmd.com/es_us/nokia-c-300/buy?sku=F21CIV1022003'
-    Privacy_Policy_link = 'https://www.hmd.com/en_int/privacy'
+    Privacy_Policy_link = 'https://www.hmd.com/de_de/privacy'
     Continue_with_Google_link = 'https://accounts.google.com'
 
 

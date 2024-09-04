@@ -104,43 +104,43 @@ def test_check_walmart_family_mobile(set_ShopNow_page):
 
 def test_click_unlocked_button(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_Unlocked_button() == False
+    assert set.check_clicked_Unlocked_button() != True
     set.find(set.locators['Unlocked_button']).click()
     assert set.check_clicked_Unlocked_button() == True
 
 def test_click_Consumer_Cellular(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_seller('Consumer_Cellular_buy_from_Walmart') == False
+    assert set.check_clicked_seller('Consumer_Cellular_buy_from_Walmart') != True
     set.find(set.locators['Consumer_Cellular']).click()
     assert set.check_clicked_seller('Consumer_Cellular_buy_from_Walmart') == True
 
 def test_click_simple_mobile(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_seller('Simple_Mobile_buy_from_Walmart') == False
+    assert set.check_clicked_seller('Simple_Mobile_buy_from_Walmart') != True
     set.find(set.locators['Simple_Mobile']).click()
     assert set.check_clicked_seller('Simple_Mobile_buy_from_Walmart') == True
 
 def test_click_straight_talk(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_seller2('Straight_Talk_buy_from_Walmart', 'Buy_from_Straight_Talk') == False
+    assert set.check_clicked_seller2('Straight_Talk_buy_from_Walmart', 'Buy_from_Straight_Talk') != True
     set.find(set.locators['Straight_Talk']).click()
     assert set.check_clicked_seller2('Straight_Talk_buy_from_Walmart', 'Buy_from_Straight_Talk') == True
 
 def test_click_total_by_verizon(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_seller2('Total_by_verizon_buy_from_Walmart', 'buy_from_Total_by_verizon') == False
+    assert set.check_clicked_seller2('Total_by_verizon_buy_from_Walmart', 'buy_from_Total_by_verizon') != True
     set.find(set.locators['Total_by_verizon']).click()
     assert set.check_clicked_seller2('Total_by_verizon_buy_from_Walmart', 'buy_from_Total_by_verizon') == True
 
 def test_click_tracfone(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_seller('Tracfone_buy_from_Walmart') == False
+    assert set.check_clicked_seller('Tracfone_buy_from_Walmart') != True
     set.find(set.locators['Tracfone']).click()
     assert set.check_clicked_seller('Tracfone_buy_from_Walmart') == True
 
 def test_click_walmart_family_mobile(set_ShopNow_page):
     assert set.driver.current_url == global_links.buying_link
-    assert set.check_clicked_seller('Walmart_family_mobile_buy_from_Walmart') == False
+    assert set.check_clicked_seller('Walmart_family_mobile_buy_from_Walmart') != True
     set.find(set.locators['Walmart_family_mobile']).click()
     assert set.check_clicked_seller('Walmart_family_mobile_buy_from_Walmart') == True
 

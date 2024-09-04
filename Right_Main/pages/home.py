@@ -55,8 +55,8 @@ class home(Common):
                 return True
             else:
                 return False
-        except:
-            return False
+        except Exception as e:
+            return e
 
     def check_button(self, button):
         try:
@@ -75,8 +75,8 @@ class home(Common):
             if par == Data.UNLOCKED_BUTTON_PARAGRAPH and available == Data.AVAILABLE_AT2 and pricing == Data.PRICING_NOTE:
                 return True
             return False
-        except:
-            return False
+        except Exception as e:
+            return e
 
     def check_clicked_seller(self, locator):
         try:
@@ -86,9 +86,8 @@ class home(Common):
             if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
                 return True
             return False
-        except:
-            return False
-
+        except Exception as e:
+            return e
     def check_clicked_seller2(self, loc1, loc2):
         try:
             available = self.find(self.locators['Available_at_text_dev'])
@@ -98,5 +97,5 @@ class home(Common):
             if available.text == Data.AVAILABLE_AT2 and pricing.text == Data.PRICING_NOTE:
                 return True
             return False
-        except:
-            return False
+        except Exception as e:
+            return e

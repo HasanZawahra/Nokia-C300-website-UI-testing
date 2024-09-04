@@ -35,5 +35,5 @@ class buttons(Common):
                 return True
             else:
                 return False
-        except:
-            return False
+        except Exception as e:
+            return e
